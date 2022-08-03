@@ -98,7 +98,22 @@ body{
     font-weight: bold;
 }
 
-.btn-menu{
+.text-menu-btn{
+    display: none;
+    color:#0c0a0d;
+    font-size: 15px;
+    border-radius: 5px;
+    background-image: url(../res/menu.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 23px 23px;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    padding-left: 30px;    
+}
+
+.menu-btn{
     display: none;
     color:#0c0a0d;
     font-size: 15px;
@@ -110,6 +125,10 @@ body{
     border: none;
     padding: 10px 20px;
     padding-left: 30px;
+}
+
+.menu-btn:checked .menu--nav--sections ul{
+    
 }
 
 main{
@@ -645,7 +664,11 @@ h2{
         display: none;
     }
 
-    .btn-menu{
+    .text-menu-btn{
+        display: inline-block;
+    }
+
+    .menu-btn{
         display: inline-block;
     }
 
