@@ -681,16 +681,18 @@ h2{
     }
 
     .container--menu--nav--ul{
-        display: none;
+        display:flex;
+        justify-content: flex-end;
         position:absolute;
-        top:100%;
-        right:0;
+        top: 100%;
+        right:-300px;
         width: 100%;
+        transition: right 0.2s linear;
     }
     
     #menu-btn:checked + .container--menu--nav--ul{
-        display: flex;
-        justify-content: flex-end;
+        right: 0;
+        
     }
     
     .text-menu-btn{
