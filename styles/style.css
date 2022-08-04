@@ -73,7 +73,7 @@ body{
     padding-right: 5%;
 }
 
-.menu--nav--sections ul{
+.menu--nav--ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -83,18 +83,18 @@ body{
     padding: 0;
 }
 
-.menu--nav--sections ul li{
-    padding: 6px 12px;
+.menu--nav--ul li{
+    padding: 6px 9px;
     /* height: 43px; */
 }
 
-.menu--nav--sections ul li a{
-    font-size: large;
+.menu--nav--ul li a{
+    font-size: 15px;
     display: inline-block;
     text-decoration: none;
     color: #0c0a0d;
 }
-.menu--nav--sections ul li a:hover{
+.menu--nav--ul li a:hover{
     font-weight: bold;
 }
 
@@ -113,7 +113,7 @@ body{
     padding-left: 30px;    
 }
 
-.menu-btn{
+#menu-btn{
     display: none;
     color:#0c0a0d;
     font-size: 15px;
@@ -125,10 +125,6 @@ body{
     border: none;
     padding: 10px 20px;
     padding-left: 30px;
-}
-
-.menu-btn:checked .menu--nav--sections ul{
-    
 }
 
 main{
@@ -631,6 +627,19 @@ h2{
 
 /* Desktop First */
 
+@media (min-width: 1158px){
+    /* ===================================
+            TODO    EL      SITIO
+    =====================================*/
+        
+    .menu--nav--ul li{
+        padding: 6px 15px;
+    }
+
+    .menu--nav--ul li a{
+        font-size: large;
+    }
+}
 
 @media (max-width: 699px){
 
@@ -653,23 +662,40 @@ h2{
         height: 70px;
     }
 
-    .menu--nav--sections ul li a{
-        font-size: small;
-        display: inline-block;
-        text-decoration: none;
+    .menu--nav--ul{
+        flex-direction: column;
+    }
+
+    .menu--nav--ul li{
+        margin-right: 0px;
+    }
+
+    .menu--nav--ul li a{
         color: #0c0a0d;
+        text-align: center;
+        background-color: #F5E1E3;
+        line-height: 100%;
+        display: block;
+        font-size: 25px;
+        padding: 10px;
     }
 
-    .menu--nav--sections ul{
+    .container--menu--nav--ul{
         display: none;
+        position:absolute;
+        top:100%;
+        right:0;
+        width: 100%;
     }
-
+    
+    #menu-btn:checked + .container--menu--nav--ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
     .text-menu-btn{
         display: inline-block;
-    }
-
-    .menu-btn{
-        display: inline-block;
+        height: 40px;
     }
 
     .logo_footer{
