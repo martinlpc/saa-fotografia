@@ -292,7 +292,7 @@ h2{
     font-weight: 300;
 }
 
-.services--container{
+.services--box{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -321,7 +321,7 @@ h2{
         5px 5px 7px 0px rgba(0, 0, 0, 0.16);
 }
 
-.services--container h2{
+.services--box h2{
     grid-area: title;
     font-weight: 500;
 }
@@ -336,7 +336,7 @@ h2{
     grid-area: content;
 }
 
-.customer--container{
+.customer--parent-box{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -348,7 +348,7 @@ h2{
     padding: 50px 10%;
 }
 
-.customer--container h3{
+.customer--parent-box h3{
     grid-area: title;
     font-weight: 500;
 }
@@ -384,7 +384,7 @@ h2{
     margin-top: 3px;
 }
 
-.container--about{
+.box--about{
     display: flex;
     padding: 0 10%;
     justify-content: center;
@@ -392,20 +392,19 @@ h2{
     margin: auto;
 }
 
-.container--about--img-sabrina{
+.box--about--img-sabrina{
     order: 1;
     /* flex-shrink: 1; */
 }
 
-.container--about--img-sabrina img{
+.img-sabrina{
     width: 200px;
-    height: 200px;
     box-shadow:  
         5px 5px 7px 0px rgba(0, 0, 0, 0.16);
     margin: 20px 10px;
 }
 
-.container--about--text-sabrina{
+.box--about--text-sabrina{
     order: 2;
     /* flex-grow: 2; */
     flex-shrink: 1;
@@ -415,7 +414,7 @@ h2{
     margin: 0 0 1em 0;
 }
 
-.faq--container--lists{
+.faq--box--lists{
     display: block;    
     margin: 20px 5%;
 }
@@ -434,7 +433,7 @@ h2{
     width: 100%;
 }
 
-.container--contact--form{
+.box--contact--form{
     margin: 20px 5%;
 }
 
@@ -473,24 +472,24 @@ h2{
     align-items: center;
 }
 
-.container--h1-blog,
-.container--filters{
+.box--h1-blog,
+.box--filters{
     vertical-align: middle;
     width: 50%;
 }
-.container--h1-blog{
+.box--h1-blog{
     display: inline-block;
     width: 50%;
 }
 
-.container--h1-blog h1{
+.box--h1-blog h1{
     font-size: x-large;
     display: inline-block;
 }
 
 
 
-.container--filters ul{
+.box--filters ul{
     list-style: none;
     font-size:14px;
     margin: 0;
@@ -499,7 +498,7 @@ h2{
     justify-content: flex-end;  
 }
 
-.container--filters ul li{
+.box--filters ul li{
     padding: 5px;
     padding-bottom: 2px;
     margin: 5px;
@@ -508,14 +507,14 @@ h2{
     border-radius: 5px;
 }
 
-.container--filters ul li a{
+.box--filters ul li a{
     text-decoration: none;
     color: #F5E1E3;
     font-size: smaller;
     text-align: center;
 }
 
-.container--filters ul li a:hover{
+.box--filters ul li a:hover{
     font-weight: bold;
 }
 
@@ -529,7 +528,7 @@ h2{
     padding-top: 110px
 }
 
-.container--article{
+.box--article{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -537,7 +536,7 @@ h2{
     gap: 5px;
 }
 
-.container--article article{
+.box--article article{
     flex: 1;
     background-color: white;
     margin: 5px;
@@ -560,41 +559,41 @@ h2{
     font-size: 16px;
     margin-bottom: 12px;
 }
-.container--article article h4{
+.box--article article h4{
     font-size: 14px;
     vertical-align: top;
     display: inline-block;
     margin-top: 0;
 }
 
-.container--article article p{
+.box--article article p{
     font-size: 12px;
 }
 
-.container--article-body img{
+.box--article-body img{
     display: inline-block;
     vertical-align: middle;
     width: 80px;
     height: 120px;
 }
 
-.container--article-body--intro{
+.box--article-body--intro{
     display: inline-block;
     vertical-align: middle;
     width: calc(100% - 85px);
 }
 
-.container--article-body--intro p,
-.container--article-body--text p{
+.box--article-body--intro p,
+.box--article-body--text p{
     text-align:justify;
 }    
 
 
-.container--article-body--text{
+.box--article-body--text{
     display: block;
 }
 
-.tips .container--article .container--article-title h3{
+.tips .box--article .box--article-title h3{
     font-weight: 400;
     font-size: 14px;
 }
@@ -680,7 +679,7 @@ h2{
         padding: 10px;
     }
 
-    .container--menu--nav--ul{
+    .box--menu--nav--ul{
         display:flex;
         justify-content: flex-end;
         position:absolute;
@@ -690,7 +689,7 @@ h2{
         transition: right 0.2s linear;
     }
     
-    #menu-btn:checked + .container--menu--nav--ul{
+    #menu-btn:checked + .box--menu--nav--ul{
         right: 0;
         
     }
@@ -727,7 +726,7 @@ h2{
                     INDEX
     =====================================*/
 
-    .services--container{
+    .services--box{
         grid-template-columns: 1fr;
         grid-template-areas:
             'title'
@@ -741,7 +740,7 @@ h2{
         margin-bottom: 25px;
     }
 
-    .customer--container{
+    .customer--parent-box{
         grid-template-columns: 1fr;
         grid-template-areas:
             'title'
@@ -751,13 +750,17 @@ h2{
         gap: 40px;
     }
 
-    .container--about{
+    .box--about{
         padding: 0 5%;
         flex-wrap: wrap;
     }
 
+    .img-sabrina{
+        width: 150px;
+    }
+
     .about--text,
-    .container--about--text-sabrina p{
+    .box--about--text-sabrina p{
         text-align: center;
     }
 
@@ -769,11 +772,11 @@ h2{
                     BLOG
     =====================================*/   
     
-    .container--h1-blog h1{
+    .box--h1-blog h1{
         font-size: large;
     }
 
-    .container--article{
+    .box--article{
         grid-template-columns: 1fr;
         grid-template-areas:
             'art1'

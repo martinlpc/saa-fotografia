@@ -28,7 +28,7 @@
                 <!-- <button class="btn-menu">Menú</button>      -->
                 <label class="text-menu-btn" for="menu-btn" ></label>
                 <input id="menu-btn" type="checkbox" />
-                <div class="container--menu--nav--ul">
+                <div class="box--menu--nav--ul">
                     <ul class="menu--nav--ul">
                         <li><a href="#top">Inicio</a></li>
                         <li><a href="#services">Servicios</a></li>
@@ -70,7 +70,7 @@
         </section>
         
         <section id="services" class="padding-section">
-            <div class="services--container">
+            <div class="services--box">
                 <h2>Brindamos los siguientes servicios</h2>
                 <!-- Contenido multimedia para mostrar preview de algunos trabajos -->
                 <!-- Se utiliza por el momento una misma imágen de prueba -->
@@ -87,7 +87,7 @@
                     <img src="res/prod-1.jpg" alt="Artículos de librería sobre mesa de madera"/>
                 </div>
             </div>
-            <div class="customer--container">
+            <div class="customer--parent-box">
                 <h3>Lo que dicen nuestros clientes</h3>
                 <div class="customer--box client1">
                     <img src="res/customer.jpg" alt="Foto de cliente 1"/>
@@ -106,11 +106,11 @@
         
         <section id="about" class="padding-section">
             <h2>Sobre mi</h2>
-            <div class="container--about">
-                <div class="container--about--img-sabrina">
-                    <img src="res/sabrina-profile.jpg" alt="Sabrina Aguilar"/>
+            <div class="box--about">
+                <div class="box--about--img-sabrina">
+                    <img class="img-sabrina" src="res/sabrina-profile.jpg" alt="Sabrina Aguilar"/>
                 </div>
-                <div class="container--about--text-sabrina">
+                <div class="box--about--text-sabrina">
                     <p class="about--text">¡Hola!</p>
                     <p class="about--text">Soy Sabrina Aguilar, Licenciada en Publicidad y Fotógrafa.<br />
                     Me especializo en fotografía y contenido audiovisual para marcas y eventos.<br />
@@ -123,9 +123,11 @@
         </section>
         
         <section id="faq" class="padding-section">
-            <div class="faq--container">
+            
+            <!--
+            <div class="faq--box">
                 <h2>¿Tenés dudas? Chequeá antes las <i>preguntas frecuentes</i></h2>
-                <div class="faq--container--lists">
+                <div class="faq--box--lists">
                     <ul class="ul-master">
                         <li>¿Qué medios de pago aceptas?
                             <ul class="ul-child">
@@ -144,11 +146,53 @@
                     </ul>
                 </div>
             </div>
+            -->
+
+            <h2>¿Tenés dudas? Chequeá antes las <i>preguntas frecuentes</i></h2>
+            <div class="accordion" id="accordionFAQ">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué medios de pago aceptás?
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Acepto tarjeta de débito, tarjeta de crédito, transferencia bancaria o MercadoPago.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿En que formato se entrega el material?
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Fotografías: formato <strong>.jpg</strong> con resolución a elección</li>
+                                <li>Video: formato <strong>.mp4</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
         </section>
         
         <section id="contact" class="padding-section">
             <h2>Contame en que puedo ayudarte</h2>
-            <div class="container--contact--form">
+            <div class="box--contact--form">
                 <!-- INICIO FORM DE CONTACTO -->
                 <form class="contact--form">
                     <input type="text" placeholder="Nombre" id="name-contact" />
