@@ -1,3 +1,4 @@
 - (ok) FAQ: aplicar accordion para cada pregunta
 - (  ) SERVICES: aplicar modales en cada card de servicio? 
 - (  ) BANNER: carrousel automatico con algunas fotos?
+- (  ) PADDING: Aplicar clase "padding-default" a todos los elementos en index para que sean equitativos

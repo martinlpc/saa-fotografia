@@ -292,6 +292,10 @@ h2{
     font-weight: 300;
 }
 
+.padding-default{
+    padding: 0 10%;
+}
+
 .services--box{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
