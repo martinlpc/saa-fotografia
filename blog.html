@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
     <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body class="body--blog">
@@ -55,129 +56,154 @@
             </div>
         </nav>
 
-        <div class="blog-content">
-            <section class="trends" id="trends">
-                <h2>Tendencias</h2>
-                <div class="box--article">
-                    <article class="article-trend art1">
-                        <div class="box--article-title">
-                            <h3 class="article-title">#DARKFOOD</h3>
-                        </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/tendencia_darkfood_VERTICAL.png" alt="Panqueque oscuro" title="Panqueque oscuro"/>
-                            <div class="box--article-body--intro">
-                                <p>Este estilo de fotografía se conoce con distintos nombres: dark and moody, mystic light o chiaroscuro, una palabra italiana procedente de la pintura y que significa «claroscuro».</p>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p> En estas fotografías, encontramos un acusado contraste entre la luz y las sombras, como en los cuadros de Caravaggio o Rembrandt, que crea un ambiente intenso y a menudo dramático.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-trend art2">
-                        <div class="box--article-title">
-                            <h3 class="article-title">#LUZNATURAL</h3>
-                        </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/tendencia_luz natural_VERTICAL.png" alt="Frascos plásticos a la luz del sol" title="Frascos al sol"/>
-                            <div class="box--article-body--intro">
-                                <p>Es un tipo de luz donde se aprovecha 100% el sol.</p>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p>La luz puede ser frontal, lateral, cenital o trasera. Actualmente se emplea en productos de skincare, bebidas, food (como cítricos) sobre colores pasteles o brillantes.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-trend art3">
-                        <div class="box--article-title">
-                            <h3 class="article-title">#NEON</h3>
-                        </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/tendencia_neon_VERTICAL.png" alt="Cámara fotográfica Sony Alpha 7S" title="Cámara con efecto neon"/>
-                            <div class="box--article-body--intro">
-                                <p>Se emplean luces de neón sobre el producto o a contraluz, usualmente con bases oscuras para que las luces puedan resaltar atributos específicos del producto.</p>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p>Genera un ambiente misterioso y atractivo. Se suele emplear también para generar expectativa de productos próximos a lanzar (sin dar a conocer los detalles en su totalidad).</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="success-cases" id="cases">
-                <h2>Casos de éxito</h2>
-                <div class="box--article">
-                    <article class="article-cases art1">
-                        <div class="box--article-title">
-                            <h3 class="article-title">PASTELERÍA</h3>
-                        </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/caso exito_pasteleria_vertical.png" alt="Cupcakes" title="Cupcakes"/>
-                            <div class="box--article-body--intro">
-                                <h4>#DulceLevi</h4>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p>Juliana tiene su emprendimiento hace 4 años. Actualizó su menú con nuevas fotografías y re-brandeó su marca, logrando alcanzar a nuevas audiencias. Conocé su estrategia y resultados.</p>
-                            </div>
-                        </div>
-                    </article>
+        <div class="blog-content container-fluid">
+            <div class="row">
+                <h2 id="trends" class="col-12 mt-5 mb-5 mx-auto padding-scroll">Tendencias</h2>
+            </div>
+            <section class="trends row mb-2 pt-2 gy-2">
                 
-                    <article class="article-cases art2">
-                        <div class="box--article-title">
-                            <h3 class="article-title">DISEÑADORA DE INTERIORES</h3>
+                <article class="col-12 col-md-12 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Trends</strong>
+                            <h3 class="article-title text-start fw-semibold">#DARKFOOD</h3>
+                            <p class="card-text">
+                                Este estilo de fotografía se conoce con distintos nombres: dark and moody, mystic light o chiaroscuro...
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
                         </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/caso exito_diseñadora_VERTICAL.png" alt="Mesa con frutas y sillas ordenadas" title="Diseño de interior"/>
-                            <div class="box--article-body--intro">
-                                <h4>#Maite</h4>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p>Rosario lanzó su marca hace 8 meses. Con una calendarización de contenidos con material actualizado, logró incrementar las visitas a su sitio y base de contactos. Conocé sus resultados.</p>
-                            </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/tendencia_darkfood_VERTICAL.png" alt="Panqueque oscuro" title="Panqueque oscuro"/>
                         </div>
-                    </article>  
+                    </div>
+                </article>
+                                
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Trends</strong>
+                            <h3 class="article-title text-start fw-semibold">#LUZNATURAL</h3>
+                            <p class="card-text">
+                                En estas fotografías, encontramos un acusado contraste entre la luz y las sombras, como en los cuadros de...
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/tendencia_luz natural_VERTICAL.png" alt="Frascos plásticos a la luz del sol" title="Frascos al sol"/>
+                        </div>
+                    </div>
+                </article>
 
-                    <article class="article-cases art3">
-                        <div class="box--article-title">
-                            <h3 class="article-title">Banda de música</h3>
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Trends</strong>
+                            <h3 class="article-title text-start fw-semibold">#NEON</h3>
+                            <p class="card-text">
+                                Se emplean luces de neón sobre el producto o a contraluz, usualmente con bases oscuras para que...
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
                         </div>
-                        <div class="box--article-body">
-                            <img src="res/blog/caso exito_banda_VERTICAL.png" alt="Guitarrista en el escenario" title="Eduardo Akel"/>
-                            <div class="box--article-body--intro">
-                                <h4>#ProyectoAkel</h4>
-                            </div>
-                            <div class="box--article-body--text">
-                                <p>Eduardo Akel es músico y compositor. Con nuevas coberturas fotográficas de su show, recopiló material para promocionarse y logró incrementar sus seguidores en sus redes sociales!</p>
-                            </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/tendencia_neon_VERTICAL.png" alt="Cámara fotográfica Sony Alpha 7S" title="Cámara con efecto neon"/>
                         </div>
-                    </article>         
-                </div>
+                    </div>
+                </article>
             </section>
+            
 
-            <section class="tips" id="tips">
-                <h2>Tips</h2>
-                <div class="box--article">
-                    <article class="article-tips art1">
-                        <div class="box--article-title">
-                            <h3 class="article-title">"Las #10 claves para incrementar las ventas de tu e-commerce"</h3>
-                        </div>                       
-                    </article>
-                    <article class="article-tips art2">
-                        <div class="box--article-title">
-                            <h3 class="article-title">"Las #5 cosas que tenés que saber para comunicar tus productos en redes sociales"</h3>
-                        </div>
-                    </article>
-                    <article class="article-tips art3">
-                        <div class="box--article-title">
-                            <h3 class="article-title">"#3 tips para generar contenido atractivo de un evento en real-time"</h3>
-                        </div>
-                    </article>
-                </div>
+            <div class="row">
+                <h2 id="cases" class="col-12 mt-5 mb-5 mx-auto padding-scroll">Casos de éxito</h2>
+            </div>
+            <section class="trends row mb-2 pt-2 gy-2">
                 
+                <article class="col-12 col-md-12 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Casos de éxito</strong>
+                            <h3 class="article-title text-start fw-semibold">PASTELERÍA</h3>
+                            <p class="card-text">
+                                Juliana tiene su emprendimiento hace 4 años. Actualizó su menú con nuevas fotografías y re-brandeó su marca, logrando alcanzar a nuevas audiencias. Conocé su estrategia y resultados.
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/caso exito_pasteleria_vertical.png" alt="Cupcakes" title="Cupcakes"/>
+                        </div>
+                    </div>
+                </article>
+                                
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Casos de éxito</strong>
+                            <h3 class="article-title text-start fw-semibold">DISEÑADORA DE INTERIORES</h3>
+                            <p class="card-text">
+                                Rosario lanzó su marca hace 8 meses. Con una calendarización de contenidos con material actualizado, logró incrementar las visitas a su sitio y base de contactos. Conocé sus resultados.
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/caso exito_diseñadora_VERTICAL.png" alt="Mesa con frutas y sillas ordenadas" title="Diseño de interior"/>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Casos de éxito</strong>
+                            <h3 class="article-title text-start fw-semibold">Banda de música</h3>
+                            <p class="card-text">
+                                Eduardo Akel es músico y compositor. Con nuevas coberturas fotográficas de su show, recopiló material para promocionarse y logró incrementar sus seguidores en sus redes sociales!
+                            </p>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                        <div class="col-5 d-none d-md-block p-0 rounded">
+                            <img class="img-fluid" src="res/blog/caso exito_banda_VERTICAL.png" alt="Guitarrista en el escenario" title="Eduardo Akel"/>
+                        </div>
+                    </div>
+                </article>
             </section>
+
+            <div class="row">
+                <h2 id="tips" class="col-12 mt-5 mb-5 mx-auto padding-scroll">Tips</h2>
+            </div>
+            <section class="trends row mb-2 pt-2 gy-2">
+                
+                <article class="col-12 col-md-12 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Tips</strong>
+                            <h3 class="article-title text-start fw-semibold">Las #5 cosas que tenés que saber para comunicar tus productos en redes sociales</h3>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                    </div>
+                </article>
+                                
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Tips</strong>
+                            <h3 class="article-title text-start fw-semibold">Las #10 claves para incrementar las ventas de tu e-commerce</h3>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4 border rounded shadow-sm">
+                    <div class="row flex-row overflow-hidden">
+                        <div class="col-12 col-md-7 p-8 d-flex flex-column">
+                            <strong class="d-inline-block my-2 text-primary">Tips</strong>
+                            <h3 class="article-title text-start fw-semibold">#3 tips para generar contenido atractivo de un evento en real-time</h3>
+                            <a href="#top">Seguir leyendo</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
         </div>
-
+        
         <div class="btn-go-top">
             <a class="anchor-top" href="#top"><i class="fa-solid fa-angles-up"></i></a>
         </div>
