@@ -41,7 +41,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    background-color: #F5E1E3;
+    background-color: #BFB4B0;
     margin-bottom: 0;
     z-index: 9;
     box-shadow: 
@@ -141,7 +141,7 @@ h3{
 }
 
 footer{
-    background-color: #F5E1E3;
+    background-color: #BFB4B0;
     font-size: 1em;
     margin-bottom: 0;
     display: grid;
@@ -450,8 +450,11 @@ h2{
     height: 100px;
 }
 
-
-
+.btn-contact{
+    --bs-btn-bg: #BFB4B0;
+    --bs-btn-color:#0c0a0d;
+    --bs-btn-font-weight: 600;
+}
 
 /*  ============================= */
 /*      PROPIEDADES DE BLOG       */
@@ -678,7 +681,7 @@ h2{
     .menu--nav--ul li a{
         color: #0c0a0d;
         text-align: center;
-        background-color: #F5E1E3;
+        background-color: #BFB4B0;
         line-height: 100%;
         display: block;
         font-size: 25px;
