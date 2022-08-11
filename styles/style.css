@@ -492,11 +492,9 @@ h2{
 }
 
 .box--h1-blog h1{
-    font-size: x-large;
+    font-size: xx-large;
     display: inline-block;
 }
-
-
 
 .box--filters ul{
     list-style: none;
@@ -531,75 +529,9 @@ h2{
     display: block;
 }
 
-.trends,
-.success-cases,
-.tips{
-    padding-top: 110px
-}
-
-.box--article{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        'art1 art2 art3';
-    gap: 5px;
-}
-
-.box--article article{
-    flex: 1;
-    background-color: white;
-    margin: 5px;
-    padding: 4px;
-    box-shadow: 
-        0 10px 10px -10px rgb(33 35 38 / 10%);
-}
-
-.art1{
-    grid-area: art1;
-}
-.art2{
-    grid-area: art2;
-}
-.art3{
-    grid-area: art3;
-}
-
 .article-title{
     font-size: 16px;
     margin-bottom: 12px;
-}
-.box--article article h4{
-    font-size: 14px;
-    vertical-align: top;
-    display: inline-block;
-    margin-top: 0;
-}
-
-.box--article article p{
-    font-size: 12px;
-}
-
-.box--article-body img{
-    display: inline-block;
-    vertical-align: middle;
-    width: 80px;
-    height: 120px;
-}
-
-.box--article-body--intro{
-    display: inline-block;
-    vertical-align: middle;
-    width: calc(100% - 85px);
-}
-
-.box--article-body--intro p,
-.box--article-body--text p{
-    text-align:justify;
-}    
-
-
-.box--article-body--text{
-    display: block;
 }
 
 .tips .box--article .box--article-title h3{
@@ -614,6 +546,10 @@ h2{
     border-radius: 50%;
     z-index: 9;
     cursor: pointer;
+}
+
+.btn-go-top i{
+    font-size: x-large;
 }
 
 .btn-go-top:hover{
@@ -706,6 +642,7 @@ h2{
     .text-menu-btn{
         display: inline-block;
         height: 40px;
+        padding-right: 0;
     }
 
     .logo_footer{

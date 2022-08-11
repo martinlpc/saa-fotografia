@@ -33,9 +33,9 @@
                         <li><a href="#top">Inicio</a></li>
                         <li><a href="#services">Servicios</a></li>
                         <li><a href="#about">Sobre mi</a></li>
-                        <li><a href="blog.html" target="_blank">Blog</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contacto</a></li>
+                        <li><a href="blog.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Blog</a></li>
                         <!-- Logos de RRSS -->
                         <li><a href="https://www.instagram.com/photo.saa" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="https://www.facebook.com/photo.saa.ok" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
@@ -126,30 +126,30 @@
         <section id="faq" class="padding-section">
             
             <h2>¿Tenés dudas? Chequeá antes las <i>preguntas frecuentes</i></h2>
-            <div class="accordion padding-default" id="accordionFAQ">
+            <div class="accordion padding-default" id="accordionfaq">
                 <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingOne">
+                    <h3 class="accordion-header" id="headingone">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            data-bs-target="#collapseone" aria-expanded="false" aria-controls="collapseone">
                             ¿Qué medios de pago aceptás?
                         </button>
                     </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseone" class="accordion-collapse collapse" aria-labelledby="headingone"
+                        data-bs-parent="#accordionfaq">
                         <div class="accordion-body">
                             <p>Acepto tarjeta de débito, tarjeta de crédito, transferencia bancaria o MercadoPago.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingTwo">
+                    <h3 class="accordion-header" id="headingtwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
                             ¿En que formato se entrega el material?
                         </button>
                     </h3>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapsetwo" class="accordion-collapse collapse" aria-labelledby="headingtwo"
+                        data-bs-parent="#accordionfaq">
                         <div class="accordion-body">
                             <ul>
                                 <li>Fotografías: formato <strong>.jpg</strong> con resolución a elección</li>
@@ -167,39 +167,38 @@
             <h2>Contame en que puedo ayudarte</h2>
             <form class="padding-default">
                 <div class="mb-2">
-                    <label for="inputName" class="form-label">Nombre y apellido</label>
-                    <input type="text" class="form-control" id="inputName"/>
+                    <label for="inputname" class="form-label">Nombre y apellido</label>
+                    <input type="text" class="form-control" id="inputname"/>
                 </div>
                 <div class="mb-2">
-                    <label for="inputEmail" class="form-label">E-mail</label>
-                    <input type="email" placeholder="nombre@dominio.com" class="form-control" id="inputEmail" aria-describedby="emailHelp"/>
+                    <label for="inputemail" class="form-label">E-mail</label>
+                    <input type="email" placeholder="nombre@dominio.com" class="form-control" id="inputemail" aria-describedby="emailhelp"/>
                 </div>
                 <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="isSuscribing">
-                    <label class="form-check-label" for="isSuscribing">Deseo recibir novedades por email</label>
+                    <input type="checkbox" class="form-check-input" id="issuscribing">
+                    <label class="form-check-label" for="issuscribing">Deseo recibir novedades por email</label>
                 </div>
                 <div class="mb-2">
-                    <label for="inputTel" class="form-label">Teléfono</label>
-                    <input type="text" placeholder="11-1234-5678" class="form-control" id="inputTel">
+                    <label for="inputtel" class="form-label">Teléfono</label>
+                    <input type="text" placeholder="11-1234-5678" class="form-control" id="inputtel">
                 </div>
-                <div class="mb-0">
-                    <label for="serService" class="form-label">¿Qué servicio estás buscando?</label>
-                    <select class="form-select" name="" id="selService">
+                <div class="mb-2">
+                    <label for="selservice" class="form-label">¿Qué servicio estás buscando?</label>
+                    <select class="form-select" name="" id="selservice">
                         <option value="1">Fotografía de productos</option>
                         <option value="2">Contenido para RRSS</option>
                         <option value="3">Cobertura de evento</option>
                     </select>
                 </div>
                 <div class="mb-1">
-                    <label for="comments" class="form-label"></label>
                     <textarea id="comments" rows="10" class="form-control" placeholder="Dame detalles para brindarte la mejor solución ;)"></textarea>
                 </div>
                 <!-- Button trigger modal -->
-                <button type="submit" class="btn btn-contact d-block col-6 mx-auto" data-bs-toggle="modal" data-bs-target="#modalSuccess">
+                <button type="submit" class="btn btn-contact d-block col-6 mx-auto" data-bs-toggle="modal" data-bs-target="#modalsuccess">
                     Enviar consulta
                 </button>
                 <!-- Modal -->
-                <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="modalsuccess" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
