@@ -6,6 +6,10 @@ $sombracustomer: 5px 5px 7px 0px rgba(0, 0, 0, 0.16);
 $resmobilemax: 699px;
 $resdeskmin: 1158px;
 
+@mixin backcolor($bg){
+    background-color: $bg;
+}
+
 /*  ============================= */
 /*  PROPIEDADES COMUNES AL SITIO  */
 /*  ============================= */
@@ -24,6 +28,7 @@ body{
 }
 
 .menu--nav{
+    @include backcolor($colorheadfoot);
     height: 110px;
     position: fixed;
     width: 100%;
@@ -31,7 +36,6 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    background-color: $colorheadfoot;
     margin-bottom: 0;
     z-index: 9;
     box-shadow: $colorsombra;
@@ -187,7 +191,7 @@ h3{
 }
 
 footer{
-    background-color: $colorheadfoot;
+    @include backcolor($colorheadfoot);
     font-size: 1em;
     margin-bottom: 0;
     display: grid;
@@ -529,10 +533,11 @@ footer{
 }
 
 /* Color para los accordiones abiertos */
-.accordion-color-abierto:not(.collapsed){
-        background-color: $colorheadfoot;
+.accordion-color-abierto{
+    &:not(.collapsed){
+        @include backcolor($colorheadfoot);
         color: $colortextos;
-    
+    }
 }
 
 /* Color para el boton de consultas
@@ -637,180 +642,4 @@ durante el procesado */
 
 .anchor-top{
     color:#A83E48
-}
-
-/*  ===========================
-    ===========================
-    ===========================
-            MEDIA QUERIES
-            Desktop First
-    ===========================
-    ===========================
-    =============================
-*/
-
-@media (min-width: 1158px){
-    /* ===================================
-            TODO    EL      SITIO
-    =====================================*/
-        
-    .menu--nav--ul{
-        li{
-            padding: 6px 15px;
-            a{
-                font-size: large;
-            }
-        }
-    }
-} 
-
-@media (max-width: 699px){
-
-    /* ===================================
-            TODO    EL      SITIO
-    =====================================*/
-
-    .menu--nav--sections{
-        padding-right: 3%;
-        text-align: end;
-    }
-
-    .menu--nav--logo-header{
-        padding-left: 3%;
-        
-        img{
-            margin-top: 5px;
-            margin-bottom: 5px;
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    .menu--nav--ul{
-        flex-direction: column;
-        
-        li{
-            margin-right: 0px;
-            
-            a{
-                color: #0c0a0d;
-                text-align: center;
-                background-color: $colorheadfoot;
-                line-height: 100%;
-                display: block;
-                font-size: 25px;
-                padding: 10px;
-            }
-        }
-    }
-
-    .box--menu--nav--ul{
-        display:flex;
-        justify-content: flex-end;
-        position:absolute;
-        top: 100%;
-        right:-300px;
-        width: 100%;
-        transition: right 0.2s linear;
-    }
-
-    #menu-btn:checked + .box--menu--nav--ul{
-        right: 0;
-    }
-
-    .text-menu-btn{
-        display: inline-block;
-        height: 40px;
-        padding-right: 0;
-    }
-
-    .logo_footer{
-        width: 50px;
-    }
-
-    footer{
-        padding: 3px 2%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            'site_title'
-            'text_social'
-            'links_social'
-            'map_item'
-            'text_location'
-            'copyright'
-            'disclaimer';
-        font-size: 0.6em;
-        row-gap: 3px;
-    }
-    .map_item{
-        display: inline-block;
-        text-align: center;
-    }
-
-    h2{
-        font-size: 1.3em;
-        margin-bottom: 25px;
-    }
-
-    /* ===================================
-                    INDEX
-    =====================================*/
-
-    .services--box{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            'title'
-            'products'
-            'events'
-            'content';
-        gap: 20px;
-    }
-
-    .customer--parent-box{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            'title'
-            'client1'
-            'client2'
-            'client3';
-        gap: 40px;
-    }
-
-    .box--about{
-        padding: 0 5%;
-        flex-wrap: wrap;
-    }
-
-    .img-sabrina{
-        width: 150px;
-    }
-
-    .about--text{
-        text-align: center;
-    }
-
-    .box--about--text-sabrina{
-        p{
-            text-align: center;
-        }
-    }
-
-    /* ===================================
-                    BLOG
-    =====================================*/   
-    
-    .box--h1-blog{
-
-        h1{
-            font-size: large;
-        }
-    }
-
-    .box--article{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            'art1'
-            'art2'
-            'art3';
-    }
 }

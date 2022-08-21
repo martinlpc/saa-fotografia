@@ -14,6 +14,7 @@ body {
 }
 
 .menu--nav {
+  background-color: #BFB4B0;
   height: 110px;
   position: fixed;
   width: 100%;
@@ -21,7 +22,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #BFB4B0;
   margin-bottom: 0;
   z-index: 9;
   box-shadow: 0 10px 10px -10px rgba(33, 35, 38, 0.1);
@@ -609,131 +609,6 @@ durante el procesado */
 
 .anchor-top {
   color: #A83E48;
-}
-
-/*  ===========================
-    ===========================
-    ===========================
-            MEDIA QUERIES
-            Desktop First
-    ===========================
-    ===========================
-    =============================
-*/
-@media (min-width: 1158px) {
-  /* ===================================
-          TODO    EL      SITIO
-  =====================================*/
-  .menu--nav--ul li {
-    padding: 6px 15px;
-  }
-  .menu--nav--ul li a {
-    font-size: large;
-  }
-}
-@media (max-width: 699px) {
-  /* ===================================
-          TODO    EL      SITIO
-  =====================================*/
-  .menu--nav--sections {
-    padding-right: 3%;
-    text-align: end;
-  }
-  .menu--nav--logo-header {
-    padding-left: 3%;
-  }
-  .menu--nav--logo-header img {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 70px;
-    height: 70px;
-  }
-  .menu--nav--ul {
-    flex-direction: column;
-  }
-  .menu--nav--ul li {
-    margin-right: 0px;
-  }
-  .menu--nav--ul li a {
-    color: #0c0a0d;
-    text-align: center;
-    background-color: #BFB4B0;
-    line-height: 100%;
-    display: block;
-    font-size: 25px;
-    padding: 10px;
-  }
-  .box--menu--nav--ul {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 100%;
-    right: -300px;
-    width: 100%;
-    transition: right 0.2s linear;
-  }
-  #menu-btn:checked + .box--menu--nav--ul {
-    right: 0;
-  }
-  .text-menu-btn {
-    display: inline-block;
-    height: 40px;
-    padding-right: 0;
-  }
-  .logo_footer {
-    width: 50px;
-  }
-  footer {
-    padding: 3px 2%;
-    grid-template-columns: 1fr;
-    grid-template-areas: "site_title" "text_social" "links_social" "map_item" "text_location" "copyright" "disclaimer";
-    font-size: 0.6em;
-    row-gap: 3px;
-  }
-  .map_item {
-    display: inline-block;
-    text-align: center;
-  }
-  h2 {
-    font-size: 1.3em;
-    margin-bottom: 25px;
-  }
-  /* ===================================
-                  INDEX
-  =====================================*/
-  .services--box {
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "products" "events" "content";
-    gap: 20px;
-  }
-  .customer--parent-box {
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "client1" "client2" "client3";
-    gap: 40px;
-  }
-  .box--about {
-    padding: 0 5%;
-    flex-wrap: wrap;
-  }
-  .img-sabrina {
-    width: 150px;
-  }
-  .about--text {
-    text-align: center;
-  }
-  .box--about--text-sabrina p {
-    text-align: center;
-  }
-  /* ===================================
-                  BLOG
-  =====================================*/
-  .box--h1-blog h1 {
-    font-size: large;
-  }
-  .box--article {
-    grid-template-columns: 1fr;
-    grid-template-areas: "art1" "art2" "art3";
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
