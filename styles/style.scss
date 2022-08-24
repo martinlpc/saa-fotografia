@@ -375,6 +375,10 @@ footer{
     .p-intro{
         @include backcolor($colorfondo);
         min-width: 270px;
+
+        p{
+            font-weight: 500;
+        }
     }
 }
 

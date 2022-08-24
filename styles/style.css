@@ -355,6 +355,9 @@ footer {
   background-color: #f2f2f2;
   min-width: 270px;
 }
+#intro-phrase .p-intro p {
+  font-weight: 500;
+}
 
 .padding-default {
   padding: 0 10%;
