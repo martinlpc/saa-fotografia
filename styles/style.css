@@ -33,7 +33,7 @@ body {
 
 .menu--nav--logo-header {
   vertical-align: middle;
-  width: 50%;
+  width: 25%;
   padding-left: 5%;
 }
 @media (max-width: 699px) {
@@ -56,7 +56,7 @@ body {
 
 .menu--nav--sections {
   vertical-align: middle;
-  width: 50%;
+  width: 75%;
   padding-right: 5%;
 }
 @media (max-width: 699px) {
@@ -294,23 +294,6 @@ footer {
   margin-bottom: 150px;
 }
 
-#wapp-button {
-  position: fixed;
-  width: 32px;
-  height: 32px;
-  bottom: 10%;
-  right: 4%;
-  z-index: 9;
-  cursor: pointer;
-}
-#wapp-button:hover {
-  transform: scale(1.3);
-}
-#wapp-button img {
-  width: 30px;
-  height: 30px;
-}
-
 #banner--landing {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-repeat: no-repeat;
@@ -338,12 +321,8 @@ footer {
 }
 
 #intro-phrase {
-  text-align: center;
-  font-size: larger;
   padding-top: 250px;
   padding-bottom: 150px;
-  font-weight: 300;
-  opacity: 0.5;
   height: 600px;
   background-image: url(../res/parallax_camera_example.jpg);
   background-attachment: fixed;
@@ -356,7 +335,10 @@ footer {
   min-width: 270px;
 }
 #intro-phrase .p-intro p {
-  font-weight: 500;
+  text-align: center;
+  font-size: larger;
+  font-weight: 400;
+  color: #0c0a0d;
 }
 
 .padding-default {
