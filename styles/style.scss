@@ -3,12 +3,15 @@ $colortextos: #0c0a0d;
 $colorheadfoot: #BFB4B0;
 $colorfondo: #f2f2f2;
 $sombracustomer: 5px 5px 7px 0px rgba(0, 0, 0, 0.16);
-$resmobilemax: 699px;
+$resmobilemax: 736px;
 $resdeskmin: 1158px;
 
-@mixin backcolor($bg){
+@mixin themecolor($bg, $txtcol){
     background-color: $bg;
+    color: $txtcol;
 }
+
+
 
 /*  ============================= */
 /*  PROPIEDADES COMUNES AL SITIO  */
@@ -28,7 +31,7 @@ body{
 }
 
 .menu--nav{
-    @include backcolor($colorheadfoot);
+    @include themecolor($colorheadfoot, $colortextos);
     height: 110px;
     position: fixed;
     width: 100%;
@@ -191,7 +194,7 @@ h3{
 }
 
 footer{
-    @include backcolor($colorheadfoot);
+    @include themecolor($colorheadfoot, $colortextos);
     font-size: 1em;
     margin-bottom: 0;
     display: grid;
@@ -351,7 +354,7 @@ footer{
     background-size: cover;
 
     .p-intro{
-        @include backcolor($colorfondo);
+        @include themecolor($colorfondo, $colortextos);
         min-width: 270px;
 
         p{
@@ -368,12 +371,16 @@ footer{
 }
 
 .services--box{
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    perspective: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'title title title'
         'products events content';
-    padding: 0 10%;
+    padding: 0 10% 5%;
     gap: 10px;
     margin-bottom: 50px;
     @media(max-width:$resmobilemax){
@@ -383,7 +390,7 @@ footer{
             'products'
             'events'
             'content';
-        gap: 20px;
+        gap: 40px;
     }
     h2{
         grid-area: title;
@@ -392,9 +399,10 @@ footer{
 }
 
 .service--box{
+    overflow: hidden;
+    transition: 0.5s;
     display: block;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 0 3% 5%;
 
     p{
         text-align: center;
@@ -402,14 +410,37 @@ footer{
     }
         
     img{
+        transform-style: preserve-3d;
+        perspective: 500px;
         width: 99%;
         position: relative;
         box-shadow: $sombracustomer;
 
+        /* Sombra aplicada cuando se destaca una foto con hover */
         &:hover{
-            transform: scale(1.2);
+            box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+            z-index: 1;
         }
     }
+    
+}
+
+/*Animaciones al pasar el mouse sobre las fotos de servicios*/
+
+/* Hover sobre el contenedor de las fotos las deja a las 3 en perspectiva */
+.services--box:hover .service--box{
+    transform: rotateY(25deg);
+}
+
+/* Hover sobre una foto en particular invierte las otras 2 */
+.services--box .service--box:hover ~ .service--box{
+    transform: rotateY(-25deg);
+}
+
+/* Hover sobre una foto en particular la resalta sobre las demas */
+.services--box .service--box:hover{
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 1;
     
 }
 
@@ -464,15 +495,18 @@ footer{
 .customer--box{
     display: flex;
     flex-direction: column;
+    gap: 5px;
     align-items: center;
     align-content: flex-start;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 4% 5% 0;
     font-weight: 300;
     box-shadow: $sombracustomer;
 
     img{
         width: 60%;
+        @media(max-width:$resmobilemax){
+            width: 40%;
+        }
     }
     p{
         text-align: center;
@@ -547,9 +581,7 @@ footer{
 .accordion-color-abierto{
     
     &:not(.collapsed){
-        @include backcolor($colorheadfoot);
-        color: $colortextos;
-        
+        @include themecolor($colorheadfoot, $colortextos);
     }
 }
 
