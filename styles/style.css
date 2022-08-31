@@ -379,6 +379,9 @@ footer {
   position: relative;
   box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.16);
 }
+.service--box img:hover {
+  transform: scale(1.2);
+}
 
 .products {
   grid-area: products;
@@ -543,7 +546,8 @@ durante el procesado */
 
 .box--h1-blog {
   vertical-align: middle;
-  width: 50%;
+  margin-top: 5%;
+  text-align: center;
 }
 .box--h1-blog h1 {
   font-size: xx-large;
@@ -557,7 +561,6 @@ durante el procesado */
 
 .box--filters {
   vertical-align: middle;
-  width: 50%;
 }
 .box--filters ul {
   list-style: none;

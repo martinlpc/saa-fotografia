@@ -404,7 +404,11 @@ footer{
     img{
         width: 99%;
         position: relative;
-        box-shadow: $sombracustomer
+        box-shadow: $sombracustomer;
+
+        &:hover{
+            transform: scale(1.2);
+        }
     }
     
 }
@@ -538,11 +542,14 @@ footer{
     }
 }
 
+
 /* Color para los accordiones abiertos */
 .accordion-color-abierto{
+    
     &:not(.collapsed){
         @include backcolor($colorheadfoot);
         color: $colortextos;
+        
     }
 }
 
@@ -577,7 +584,8 @@ durante el procesado */
 
 .box--h1-blog{
     vertical-align: middle;
-    width: 50%;
+    margin-top: 5%;
+    text-align: center;
     h1{
         font-size: xx-large;
         display: inline-block;
@@ -589,7 +597,6 @@ durante el procesado */
 
 .box--filters{
     vertical-align: middle;
-    width: 50%;
 
     ul{
         list-style: none;
