@@ -644,14 +644,18 @@ footer{
             padding-bottom: 2px;
             margin: 5px;
             margin-bottom: 0;
-            background-color:#756B67; // #A83E48;
+            background-color:#756B67;
             border-radius: 5px;
+            min-width: 50px;
+            text-align: center;
 
             a{
                 text-decoration: none;
                 color: white;
                 font-size: smaller;
                 text-align: center;
+                min-width: 50px;
+                padding: 10px;
                 &:hover{
                     font-weight: bold;
                 }
@@ -688,4 +692,28 @@ footer{
 
 .anchor-top{
     color:#A83E48
+}
+
+/*  ============================= */
+/*      PROPIEDADES DE 404        */
+/*  ============================= */
+
+.box-error{
+    text-align: center;
+
+    h1{
+        display: block;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 15px;
+    }
+}
+
+.img-error{
+    img{
+        width: 90%;
+        max-width: 500px;
+    }
 }
