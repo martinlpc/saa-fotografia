@@ -32,6 +32,8 @@ body{
 
 .menu--nav{
     @include themecolor($colorheadfoot, $colortextos);
+    
+    
     height: 110px;
     position: fixed;
     width: 100%;
@@ -39,7 +41,8 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    margin-bottom: 0;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
     z-index: 9;
     box-shadow: $colorsombra;
     font-size: 0;
@@ -196,7 +199,8 @@ h3{
 footer{
     @include themecolor($colorheadfoot, $colortextos);
     font-size: 1em;
-    margin-bottom: 0;
+    margin: 5px;
+    border-radius: 10px;
     display: grid;
     padding: 0 10%;
     column-gap: 5px;
@@ -238,7 +242,7 @@ footer{
 
 .logo_footer{
     width: 80px;
-    margin-top: 2px;
+    margin-top: 5px;
     @media(max-width:$resmobilemax){
         width: 50px;
     }
@@ -319,7 +323,8 @@ footer{
     background-position:center;
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 100px;
+    margin: 0 0 100px 0;
+    border-radius: 10px;
 
     h1{
         display: block;
@@ -335,6 +340,7 @@ footer{
 
     #carousel-banner{
         z-index: -1;
+
     }
 
     img{
@@ -352,7 +358,7 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    border-radius: 10px;
     .p-intro{
         @include themecolor($colorfondo, $colortextos);
         min-width: 270px;
@@ -376,13 +382,15 @@ footer{
     transition: 0.5s;
     perspective: 500px;
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'title title title'
         'products events content';
-    padding: 0 10% 35px;
+    padding: 0 10% 45px;
     gap: 10px;
     margin-bottom: 50px;
+
     @media(max-width:$resmobilemax){
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -392,6 +400,7 @@ footer{
             'content';
         gap: 40px;
     }
+
     h2{
         grid-area: title;
         font-weight: 500;
@@ -403,6 +412,7 @@ footer{
     transition: 0.5s;
     display: block;
     padding: 0 3% 5%;
+    max-width: 300px;
 
     p{
         text-align: center;
@@ -415,6 +425,7 @@ footer{
         width: 99%;
         position: relative;
         box-shadow: $sombracustomer;
+        border-radius: 4px;
 
         /* Sombra aplicada cuando se destaca una foto con hover */
         &:hover{
@@ -456,6 +467,7 @@ footer{
 
 .customer--parent-box{
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'title title title'
@@ -501,6 +513,8 @@ footer{
     padding: 4% 5% 0;
     font-weight: 300;
     box-shadow: $sombracustomer;
+    max-width: 300px;
+    border-radius: 5px;
 
     img{
         width: 60%;
@@ -532,10 +546,11 @@ footer{
 
 .img-sabrina{
     width: 200px;
-    box-shadow: $sombracustomer;
+    box-shadow: -1px 0px 19px -1px rgba(0,0,0,0.49);
+    border-radius: 5px;
     margin: 20px 10px;
     @media(max-width:$resmobilemax){
-        width: 150px;
+        width: 170px;
     }
 }
 
