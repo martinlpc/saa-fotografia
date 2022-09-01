@@ -380,7 +380,7 @@ footer{
     grid-template-areas:
         'title title title'
         'products events content';
-    padding: 0 10% 5%;
+    padding: 0 10% 35px;
     gap: 10px;
     margin-bottom: 50px;
     @media(max-width:$resmobilemax){
@@ -562,20 +562,11 @@ footer{
     width: 100%;
 }
 
-.box--contact--form{
-    margin: 20px 5%;
-}
-
-.contact--form {
-    >*{
-        width: 100%;
-        margin-bottom: 5px;
-    }
-    textarea{
-        height: 100%;
+.form-check-label{
+    @media(max-width:$resmobilemax){
+        font-size: small;
     }
 }
-
 
 /* Color para los accordiones abiertos */
 .accordion-color-abierto{
@@ -585,18 +576,28 @@ footer{
     }
 }
 
-/* Color para el boton de consultas
-No uso variables porque no las lee
-durante el procesado */
+/* Bordes de los form-control 
+   de bootstrap en sección de contacto */
+.form-border:focus{
+    border-color: $colortextos;
+    box-shadow: 0 0 0 0.25rem rgb(12 10 13 / 25%);
+}
+
+/* Color para el boton de consultas*/
 .btn-contact{
-    --bs-btn-bg: #BFB4B0;
-    --bs-btn-color: #0c0a0d;
-    --bs-btn-font-weight: 600;
+    background-color: $colorheadfoot;
+    color: $colortextos;
+    font-weight: 600;
 }
 
 /*  ============================= */
 /*      PROPIEDADES DE BLOG       */
 /*  ============================= */
+
+/* Color para pisar props de BS */
+.txt-col{
+    color: #756B67;
+}
 
 .padding-scroll{
     padding-top: 110px;
@@ -643,12 +644,12 @@ durante el procesado */
             padding-bottom: 2px;
             margin: 5px;
             margin-bottom: 0;
-            background-color: #A83E48;
+            background-color:#756B67; // #A83E48;
             border-radius: 5px;
 
             a{
                 text-decoration: none;
-                color: #F5E1E3;
+                color: white;
                 font-size: smaller;
                 text-align: center;
                 &:hover{
