@@ -32,8 +32,7 @@ body{
 
 .menu--nav{
     @include themecolor($colorheadfoot, $colortextos);
-    
-    
+        
     height: 110px;
     position: fixed;
     width: 100%;
@@ -44,7 +43,7 @@ body{
     margin: 0;
     border-radius: 0 0 10px 10px;
     z-index: 9;
-    box-shadow: $colorsombra;
+    box-shadow: -1px 10px 16px -5px rgba(0,0,0,0.75);
     font-size: 0;
     align-items: center;
     display: flex;
@@ -65,6 +64,11 @@ body{
         margin-bottom: 5px;
         width: 100px;
         height: 100px;
+
+        &:active{
+            transform: scale(0.9);
+        }
+
         @media(max-width: $resmobilemax){
             width: 70px;
             height: 70px;
@@ -96,6 +100,15 @@ body{
 
     li{
         padding: 6px 9px;
+        border-radius: 5px;
+        &:hover{
+            background-color: #3E3540;
+            > a{
+                color:#f2f2f2;
+                background-color: #3E3540;
+            }
+        }
+
         @media (min-width: $resdeskmin) {
             padding: 6px 15px;
         }
@@ -105,6 +118,7 @@ body{
 
         a{
             font-size: 15px;
+            border-radius: 5px;
             display: inline-block;
             text-decoration: none;
             color: $colortextos;
@@ -118,9 +132,6 @@ body{
                 display: block;
                 font-size: 25px;
                 padding: 10px;
-            }
-            &:hover{
-                font-weight: bold;
             }
         }
     }
@@ -178,6 +189,26 @@ body{
     }
 }
 
+.btn-go-top{
+    position: fixed;
+    bottom: 10%;
+    right: 4%;
+    border-radius: 50%;
+    z-index: 9;
+    cursor: pointer;
+
+    a{
+        color:#A83E48;
+        i{
+            font-size: xx-large;
+            &:hover{
+                transform: scale(1.3);
+                transition-timing-function:ease;
+            }
+        }
+    }
+}
+
 main{
     padding-top: 110px;
 }
@@ -201,10 +232,12 @@ footer{
     font-size: 1em;
     margin: 5px;
     border-radius: 10px;
+    box-shadow: -1px 1px 16px 1px rgba(0,0,0,0.75);
     display: grid;
     padding: 0 10%;
     column-gap: 5px;
     row-gap: 10px;
+    
     grid-template-columns: 2fr 3fr;
     
     grid-template-areas:    
@@ -320,11 +353,10 @@ footer{
             linear-gradient(rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.4));
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     padding-top: 0;
-    margin-top: 0;
     margin: 0 0 100px 0;
-    border-radius: 10px;
+    
 
     h1{
         display: block;
@@ -340,7 +372,6 @@ footer{
 
     #carousel-banner{
         z-index: -1;
-
     }
 
     img{
@@ -352,22 +383,26 @@ footer{
 #intro-phrase{
     padding-top: 250px;
     padding-bottom: 150px;
-    height: 600px;
-    background-image: url(../res/parallax_camera_example.jpg);
+    height: calc(100vh - 110px);
+    background-image: url(../res/parallax_1.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 10px;
+    
+
     .p-intro{
         @include themecolor($colorfondo, $colortextos);
         min-width: 270px;
+        margin: 110px 0;
+        border-radius: 10px;
 
         p{
             text-align: center;
             font-size: larger;
             font-weight: 400;
             color: $colortextos;
+            
         }
     }
 }
@@ -412,7 +447,7 @@ footer{
     transition: 0.5s;
     display: block;
     padding: 0 3% 5%;
-    max-width: 300px;
+    max-width: 310px;
 
     p{
         text-align: center;
@@ -515,11 +550,15 @@ footer{
     box-shadow: $sombracustomer;
     max-width: 300px;
     border-radius: 5px;
+    
+    a{
+        text-align: center;
+    }
 
-    img{
-        width: 60%;
+    img{               
+        width: 50%;
         @media(max-width:$resmobilemax){
-            width: 40%;
+            width: 65%;
         }
     }
     p{
@@ -528,8 +567,21 @@ footer{
     }
 }
 
+#parallax-two{
+    padding-top: 250px;
+    padding-bottom: 150px;
+    height: 100vh;
+    background-image: url(../res/parallax_2.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
 .box--about{
     display: flex;
+    gap: 25px;
     padding: 0 10%;
     justify-content: center;
     align-items: center;
@@ -546,9 +598,9 @@ footer{
 
 .img-sabrina{
     width: 200px;
-    box-shadow: -1px 0px 19px -1px rgba(0,0,0,0.49);
+    box-shadow: $sombracustomer;
     border-radius: 5px;
-    margin: 20px 10px;
+    margin: auto;
     @media(max-width:$resmobilemax){
         width: 170px;
     }
@@ -557,7 +609,10 @@ footer{
 .box--about--text-sabrina{
     order: 2;
     flex-shrink: 1;
-    
+    box-shadow: $sombracustomer;
+    border-radius: 5px;
+    padding: 2%;
+
     p{
         @media(max-width:$resmobilemax){
             text-align: center;
@@ -601,6 +656,7 @@ footer{
 /* Color para el boton de consultas*/
 .btn-contact{
     background-color: $colorheadfoot;
+    box-shadow: -1px 10px 16px -5px rgba(0,0,0,0.75);
     color: $colortextos;
     font-weight: 600;
 }
@@ -648,7 +704,7 @@ footer{
 
     ul{
         list-style: none;
-        font-size:14px;
+        font-size: 14px;
         margin: 0;
         padding: 0;
         display: flex;
@@ -663,6 +719,7 @@ footer{
             border-radius: 5px;
             min-width: 50px;
             text-align: center;
+            box-shadow: $sombracustomer;
 
             a{
                 text-decoration: none;
@@ -688,25 +745,8 @@ footer{
     margin-bottom: 12px;
 }
 
-.btn-go-top{
-    position: fixed;
-    bottom: 10%;
-    right: 4%;
-    border-radius: 50%;
-    z-index: 9;
-    cursor: pointer;
-
-    i{
-        font-size: x-large;
-    }
-    &:hover{
-        transform: scale(1.3);
-        transition-timing-function:ease;
-    }
-}
-
-.anchor-top{
-    color:#A83E48
+.image-blog{
+    height: 100%;
 }
 
 /*  ============================= */

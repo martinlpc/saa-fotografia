@@ -51,8 +51,11 @@
 
     <main class="main--index">
         <div class="btn-go-top">
-            <a class="anchor-top" href="#top"><i class="fa-solid fa-angles-up"></i></a>
+            <a href="#top">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
         </div>
+
         <section id="banner--landing">
             <h1>
                 FOTOGRAFÍA Y<br/>
@@ -64,19 +67,19 @@
             <div id="carousel-banner" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="res/blog/tendencia_neon_cuadrada.png" class="d-block w-auto" title="Cámara" alt="Cámara fotográfica en la oscuridad"/>
+                        <img src="res/banner_edu.png" class="d-block w-auto" title="Cámara" alt="Cámara fotográfica en la oscuridad"/>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="res/blog/caso_exito_diseñadora_cuadrada.png" class="d-block w-auto" title="Deco" alt="Mesa con frutas y sillas ordenadas"/>
+                        <img src="res/banner_fera.png" class="d-block w-auto" title="Deco" alt="Mesa con frutas y sillas ordenadas"/>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="res/blog/caso_exito_banda_cuadrada.png" class="d-block w-auto" title="Guitarrista" alt="Guitarrista en acción"/>
+                        <img src="res/banner_leo.png" class="d-block w-auto" title="Guitarrista" alt="Guitarrista en acción"/>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="intro-phrase" class="padding-section mb-0">
+        <section id="intro-phrase" class="padding-section mb-0 text-center">
             <div class="p-intro p-2 text-center">
                 <p class="p-0 mb-0">Generamos contenido para los productos de tu <br/>e-commerce, tienda física y eventos</p>
             </div>
@@ -89,34 +92,37 @@
                 <!-- Se utiliza por el momento una misma imágen de prueba -->
                 <div class="service--box products">
                     <p>Fotografía de producto</p>
-                    <img src="res/prod-2.JPG" title="Productos" alt="Frasco de té en hebras y tetera llena"/>
+                    <a href="error.html"><img src="res/prod-2.JPG" title="Productos" alt="Frasco de té en hebras y tetera llena"/></a>
                 </div>
                 <div class="service--box events">
                     <p>Fotografía de eventos</p>
-                    <img src="res/evento-1.jpg" title="Eventos" alt="Tom Meighan de Kasabian en el escenario señalando"/>
+                    <a href="error.html"><img src="res/evento-1.jpg" title="Eventos" alt="Tom Meighan de Kasabian en el escenario señalando"/></a>
                 </div>
                 <div class="service--box content">
                     <p>Contenido audiovisual</p>
-                    <img src="res/prod-1.jpg" title="Contenidos" alt="Artículos de librería sobre mesa de madera"/>
+                    <a href="error.html"><img src="res/prod-1.jpg" title="Contenidos" alt="Artículos de librería sobre mesa de madera"/></a>
                 </div>
             </div>
             <div class="customer--parent-box">
                 <h3>Lo que dicen nuestros clientes</h3>
                 <div class="customer--box client1">
-                    <img src="res/customer.jpg" title="Cliente 1" alt="Foto de cliente 1"/>
-                    <p>"Necesitábamos renovar la imagen de la banda con fotos en vivo y en sesión. Además, también diseñó nuestro último flyer y quedó increíble."</p>
+                    <a href="https://www.instagram.com/edu.akel2" target="_blank"><img src="res/akel-cliente.png" title="Akel Baraj Franov" alt="Logo Akel Baraj Franov"/></a>
+                    <p>"Necesitábamos renovar la imagen de la banda con fotos en vivo y en sesión. Además, también diseñó nuestro último arte de tapa y quedó increíble."</p>
                 </div>
                 <div class="customer--box client2">
-                    <img src="res/customer.jpg" title="Cliente 2" alt="Foto de cliente 2"/>
+                    <a href="https://www.fera.com.ar" target="_blank"><img src="res/fera-cliente.png" title="FERA" alt="FERA"/></a>
                     <p>"Nuestro e-commerce quedó renovado por completo! Es mucho mas atractivo gracias a Sabri!"</p>
                 </div>
                 <div class="customer--box client3">
-                    <img src="res/customer.jpg" title="Cliente 3" alt="Foto de cliente 3"/>
-                    <p>La profesionalidad de SAA es destacable. Cubrió un evento importante de nuestra marca y sin dudas la contrataríamos de nuevo."</p>
+                    <a href="https://moova.io" target="_blank"><img src="res/moova-cliente.png" title="Moova" alt="Logo Moova"/></a>
+                    <p>La profesionalidad de Sabrina es destacable. Cubrió un evento importante de nuestra marca y sin dudas la contrataríamos de nuevo."</p>
                 </div>
             </div>
         </section>
         
+        <section id="parallax-two" class="padding-section mb-0">
+        </section>
+
         <section id="about" class="padding-section">
             <h2>Sobre mi</h2>
             <div class="box--about">
@@ -138,7 +144,7 @@
         <section id="faq" class="padding-section">
             
             <h2>¿Tenés dudas? Chequeá antes las <i>preguntas frecuentes</i></h2>
-            <div class="accordion padding-default" id="accordionfaq">
+            <div class="accordion px-0 mx-5 shadow-lg" id="accordionfaq">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingone">
                         <button class="accordion-button collapsed accordion-color-abierto form-border" type="button" data-bs-toggle="collapse"
@@ -208,12 +214,11 @@
                     Enviar consulta
                 </button>
                 <!-- Modal -->
-                <div class="modal fade" id="modalsuccess" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="modalsuccess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="exampleModalLabel">Gracias!</h4>
+                                <span class="modal-title" id="exampleModalLabel">Gracias!</span>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
