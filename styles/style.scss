@@ -144,7 +144,7 @@ body{
         position:absolute;
         top: 100%;
         right:-300px;
-        width: 100%;
+        width: 45%;
         transition: right 0.2s linear;
     }
 }
@@ -262,6 +262,8 @@ footer{
         font-size: 0.6em;
         row-gap: 3px;
     }
+
+    
 }
 
 .footer--site_title{
@@ -320,6 +322,12 @@ footer{
     grid-area: text_location;
     align-items: center;
     justify-content: center;
+
+    span{
+        @media(min-width: 737px){
+            font-size: small;
+        }
+    }
 }
 
 .copyright{
@@ -362,7 +370,7 @@ footer{
         display: block;
         font-size: 2.5em;
         text-align: left;
-        font-weight:300;
+        font-weight: 400;
         color: white;
         padding-left: 5%;
         position: absolute;
@@ -394,7 +402,7 @@ footer{
     .p-intro{
         @include themecolor($colorfondo, $colortextos);
         min-width: 270px;
-        margin: 110px 0;
+        margin-top: calc(20vh - 110px);
         border-radius: 10px;
 
         p{
